@@ -13,10 +13,10 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };*/
     const Category = sequelize.define(alias, cols) 
-    //Aquí creo la relación con la tabla Dishes  - OJo: Relación de 1 a muchos
+    //Aquí creo la relación con la tabla Services  - OJo: Relación de 1 a muchos
     Category.associate = function(models){
-        Category.hasMany(models.Dish,{
-                as: 'dishes',
+        Category.hasMany(models.Service,{
+                as: 'services',
                 foreignKey: 'categoryId'})}   
     return Category
 }

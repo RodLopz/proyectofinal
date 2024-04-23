@@ -63,8 +63,8 @@ module.exports = function (sequelize, dataTypes) {
             foreignKey: "userId",
           });
         
-          Item.belongsTo(models.Dish, {
-            as: "dish",
+          Item.belongsTo(models.Service, {
+            as: "service",
             foreignKey: "productId",
           });
     

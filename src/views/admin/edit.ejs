@@ -9,7 +9,7 @@
         <section class="row">
           <article class="col-12  card pt-5" >
                   <div class="card-body">
-                    <h1 class="card-title text-center">Editar el Plato</h1>
+                    <h1 class="card-title text-center">Editar el Servicio</h1>
                   </div>
           </article>
       </section>
@@ -19,33 +19,33 @@
                 <div class="row" >
                     <div class="col-8 mx-auto bg-light ">
                         <div class="signup-form">
-                            <form action="/admin/edit/<%= platoComida.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                            <form action="/admin/edit/<%= servicioWeb.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre del plato" required="required" value="<%= platoComida.name%>">
+                                    <input type="text" class="form-control" name="nombre" placeholder="Nombre del servicio" required="required" value="<%= servicioWeb.name%>">
                                 </div>	
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="descripcion" placeholder="Descripción del plato" required="required" value="<%= platoComida.description%>">
+                                    <input type="text" class="form-control" name="descripcion" placeholder="Descripción del servicio" required="required" value="<%= servicioWeb.description%>">
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%= platoComida.price%>">
+                                    <input type="number" class="form-control" name="precio" placeholder="Indique el precio" required="required" value="<%= servicioWeb.price%>">
                                 </div>
                                 <!--Esta es una forma de hacer este código -->
                                 <div class="form-group">
                                     <select  name="descuento" class="custom-select"  required>
                                       <option disabled value="#">Seleccione un descuento"</option>
-                                      <option value="0" <%= platoComida.discount == 0 ? "selected" : null %>
+                                      <option value="0" <%= servicioWeb.discount == 0 ? "selected" : null %>
                                         >Sin descuento</option>
-                                      <option value="15" <%= platoComida.discount == 15 ? "selected" : null %>>15%</option>
-                                      <option value="30" <%= platoComida.discount == 30 ? "selected" : null %>>30%</option>
+                                      <option value="15" <%= servicioWeb.discount == 15 ? "selected" : null %>>15%</option>
+                                      <option value="30" <%= servicioWeb.discount == 30 ? "selected" : null %>>30%</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <figure class="form-group">
-                                        <img class="w-100 " src="/images/platos/<%= platoComida.image%>" alt="Plato de comida">
+                                        <img class="w-100 " src="/images/servicios_web/<%= servicioWeb.image%>" alt="servicio">
                                     </figure>
                                     <!--De esta forma logro conservar y que viaje la imagen anterior de esta forma evito que el usuario seleccione una imagen nuevamente, ( si no lo desea) -->
                                 
-                                    <input type="hidden"  name="oldImagen"  value="<%= platoComida.image%>">
+                                    <input type="hidden"  name="oldImagen"  value="<%= servicioWeb.image%>">
                                     <input type="file"   name="imagen"  placeholder="Eligir la imagen...">
                                 </div>
                                 

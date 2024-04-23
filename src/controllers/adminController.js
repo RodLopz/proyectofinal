@@ -7,15 +7,15 @@ const db = require('../database/models/');
 const Op = db.Sequelize.Op;
 
 
-const Dish = db.Dish;
+const Service = db.Service;
 
 module.exports = {
     index : (req,res) =>{
-        Dish
+        Service
         .findAll()
-        .then(platos =>{
-            //return res.send(platos)
-            res.render(path.resolve(__dirname , '..','views','admin','index') , {platos});
+        .then(servicios =>{
+            //return res.send(servicios)
+            res.render(path.resolve(__dirname , '..','views','admin','index') , {servicios});
         })           
         .catch(error => res.send(error))
     },
@@ -31,22 +31,22 @@ module.exports = {
         _body.discount = req.body.descuento,
         _body.image = req.file ? req.file.filename : ''    // if ternario       
 
-        Dish
+        Service
         .create(_body)
-        .then(plato =>{
+        .then(servicio =>{
             res.redirect('/administrar');
         })  
         
     },
     show: (req,res) => {
-        Dish
+        Service
         .findByPk(req.params.id)
-        .then(platoComida =>{
-            res.render(path.resolve(__dirname, '..','views','admin','detail'), {platoComida });
+        .then(servicioWeb =>{
+            res.render(path.resolve(__dirname, '..','views','admin','detail'), {servicioWeb });
         })
     },
     destroy: (req,res) => {
-        Dish
+        Service
         .destroy({
             where : {
                id:  req.params.id
@@ -58,10 +58,10 @@ module.exports = {
         })
     },
     edit: (req,res) => {
-        Dish
+        Service
         .findByPk(req.params.id)
-        .then(platoComida =>{
-            res.render(path.resolve(__dirname, '..','views','admin','edit'), {platoComida });
+        .then(servicioweb =>{
+            res.render(path.resolve(__dirname, '..','views','admin','edit'), {servicioweb });
         })
 
     },
@@ -74,24 +74,24 @@ module.exports = {
         _body.discount = req.body.descuento,
         _body.image = req.file ? req.file.filename : req.body.oldImagen    // if ternario       
 
-        Dish
+        Service
         .update(_body ,{
             where : {
                 id : req.params.id
             }
         })
-        .then(plato =>{
+        .then(servicio =>{
             res.redirect('/administrar')
         })
         .catch(error => res.send(error));     //error de Base de Datos
     },
     search: ( req, res) =>{
-        Dish.findAll({
+        Service.findAll({
             where:{
                 name: {[Op.like]: `%${req.query.buscar}%`}
             }
         })
-        .then(resultado => { res.render(path.resolve(__dirname, '..', 'views', 'admin', 'index'),{platos: resultado});})
+        .then(resultado => { res.render(path.resolve(__dirname, '..', 'views', 'admin', 'index'),{servicios: resultado});})
         .catch(error => res.send(error))
     }
 

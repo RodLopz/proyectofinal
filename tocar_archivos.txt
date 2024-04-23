@@ -1,15 +1,15 @@
 Que tocar:
-db/restaurante.sql
-src/controllers/apis/apiProductoController.js
-toda la carpeta controllers
-database/category.js
-database/dish.js
-database/items.js
-models ver.
-routes/apis
-routes/adminRoutes.js
-routes/productosRoutes.js
-echar ojo a views/admin
-views/carrito
-views/productos
+db/restaurante.sql /tocado
+src/controllers/apis/apiProductoController.js /tocado
+toda la carpeta controllers /tocado
+database/category.js /tocado
+database/dish.js  /tocado creado service.js
+database/items.js /tocado
+models ver.  /json, no sirven de momento
+routes/apis /tocado
+routes/adminRoutes.js /tocado
+routes/productosRoutes.js /tocado
+echar ojo a views/admin  /tocado
+views/carrito /tocado
+views/productos /tocado
 views/web/index.ejs

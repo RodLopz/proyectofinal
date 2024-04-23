@@ -1,14 +1,14 @@
 const path = require('path');
 const {validationResult} = require('express-validator');
 //Estaes otra forma de requerir los modelos creados
-const {Cart, Dish, Item, User} = require('../database/models');
+const {Cart, Service, Item, User} = require('../database/models');
 
 module.exports = {
     addCart: (req,res) =>{
         const errores = validationResult(req);
         if(errores.isEmpty()){
             //Debemos buscar el producto por el id
-            Dish.findByPk(req.body.productId,{
+            Service.findByPk(req.body.productId,{
                 include: ['category']
             })
             .then((productos) =>{
@@ -32,11 +32,11 @@ module.exports = {
                 .catch(error => console.log(error)) 
             })
         }else{
-            Dish.findByPk(req.body.productId,{
+            Service.findByPk(req.body.productId,{
                 include: ['category']
             })
-            .then(platoComida =>{
-                res.render(path.resolve(__dirname, '..','views','productos','detail'), {platoComida  , errores: errores.mapped()});
+            .then(servicioWeb =>{
+                res.render(path.resolve(__dirname, '..','views','productos','detail'), {servicioWeb  , errores: errores.mapped()});
             })
         }
     },

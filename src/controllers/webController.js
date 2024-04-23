@@ -1,16 +1,16 @@
 const path = require('path');
 const fs = require('fs');
 
-//let platos  = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../models/platos.json')));
-const {Dish, Category} = require('../database/models/');
+//let servicios  = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../models/servicios.json')));
+const {Service, Category} = require('../database/models/');
 
 const webController = {
     index: function(req,res){
-        Dish
+        Service
         .findAll()
-        .then(platos =>{
-            //return res.send(platos)
-            res.render(path.resolve(__dirname, '..','views','web','index'), {platos: platos});
+        .then(servicios =>{
+            //return res.send(servicios)
+            res.render(path.resolve(__dirname, '..','views','web','index'), {servicios});
         })           
         .catch(error => res.send(error))
     },

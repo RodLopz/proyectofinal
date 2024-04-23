@@ -22,13 +22,13 @@
                <div class="col-12 mt-3">
                   <section class="row">
                      <figure class="col-3 " >
-                        <img  class="w-100" style='border: 1px solid grey' src="/images/platos/<%= item.dish.image %>" alt="<%= item.dish.name %>">
+                        <img  class="w-100" style='border: 1px solid grey' src="/images/servicios_web/<%= item.service.image %>" alt="<%= item.service.name %>">
                      </figure>
                      <section class="col-6 info">
                         <p>
                            $<%= item.salePrice; %>
                         </p>
-                        <p><%= item.dish.name %></p>
+                        <p><%= item.service.name %></p>
                      </section>
                      <section class="col-3">
                         <p>Cantidad: <%= item.quantity %></p>
@@ -54,7 +54,7 @@
                      <button  type="submit" class=" btn btn-info  btn-block">COMPRAR</button>
                   </form>
                   <hr>
-                  <a class="btn btn-success btn-block" href="/productos">Agregar más platos al carrito</a>
+                  <a class="btn btn-success btn-block" href="/productos">Agregar más servicios/productos al carrito</a>
                   <hr>
                </article>
             </div>
@@ -62,8 +62,8 @@
       </div>
       <% } else { %>
       <div class="col-12">
-         <!--Que esto no lo vea Edu. Jajajajajajaja   Abrazos-->
-         <h2 class="text-center" style="padding: 100px 0; color: white; background-color: tomato;">No tienes platos agregados a tu carrito!!!</h2>
+         <!---->
+         <h2 class="text-center" style="padding: 100px 0; color: white; background-color: tomato;">No tienes servicios agregados a tu carrito!!!</h2>
       </div>
       <% } %>
    </div>

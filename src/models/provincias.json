@@ -1,70 +1,70 @@
 [
     {
     "id":"54",
-    "nombre":"Misiones"
+    "nombre":"Alava"
     },
     {"id":"74",
-     "nombre":"San Luis"
+     "nombre":"Albacete"
     },
     {"id":"70",
-     "nombre":"San Juan"
+     "nombre":"Alicante"
     },
     {"id":"30",
-     "nombre":"Entre Ríos"
+     "nombre":"Almeria"
     },
     {"id":"78",
-     "nombre":"Santa Cruz"
+     "nombre":"Asturias"
     },
     {"id":"62",
-     "nombre":"Río Negro"
+     "nombre":"Avila"
     },
     {"id":"26",
-     "nombre":"Chubut"
+     "nombre":"Badajoz"
     },
     {"id":"14",
-     "nombre":"Córdoba"
+     "nombre":"Baleares"
     },
     {"id":"50",
-     "nombre":"Mendoza"
+     "nombre":"Barcelona"
     },
     {"id":"46",
-     "nombre":"La Rioja"
+     "nombre":"Burgos"
     },
     {"id":"10",
-     "nombre":"Catamarca"
+     "nombre":"Caceres"
     },
     {"id":"42",
-     "nombre":"La Pampa"
+     "nombre":"Cadiz"
     },{"id":"86",
-       "nombre":"Santiago del Estero"
+       "nombre":"Cantabria"
     },{"id":"18",
-       "nombre":"Corrientes"
+       "nombre":"Castellon"
     },{"id":"82",
-       "nombre":"Santa Fe"
+       "nombre":"Ciudad Real"
     },
     {"id":"90",
-     "nombre":"Tucumán"
+     "nombre":"Cuenca"
     },{"id":"58",
-       "nombre":"Neuquén"
+       "nombre":"Gerona"
     },
     {"id":"66",
-     "nombre":"Salta"
+     "nombre":"Granada"
     },
     {"id":"22",
-     "nombre":"Chaco"
+     "nombre":"Guadalajara"
     },{"id":"34",
-       "nombre":"Formosa"
+       "nombre":"Huelva"
     },
     {"id":"38",
-     "nombre":"Jujuy"
+     "nombre":"Huesca"
     },
     {"id":"02",
-     "nombre":"Ciudad Autónoma de Buenos Aires"
+     "nombre":"Madrid"
     },
     {"id":"06",
-     "nombre":"Buenos Aires"
+     "nombre":"Murcia"
     },
     {"id":"94",
-     "nombre":"Tierra del Fuego, Antártida e Islas del Atlántico Sur"
+     "nombre":"Sevilla"
     }
 ]

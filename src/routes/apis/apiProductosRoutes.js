@@ -11,10 +11,10 @@ const apiProductosController = require(path.resolve(__dirname , '..','..','contr
 //https://www.npmjs.com/package/multer
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '../../public/images/platos'));    //Aquí deben indicar donde van a guardar la imagen
+      cb(null, path.resolve(__dirname, '../../public/images/servicios_web'));    //Aquí se debe indicar donde se van a guardar las imagenes
     },
     filename: function (req, file, cb) {
-      cb(null, 'plato' + '-' + Date.now()+ path.extname(file.originalname));      //UNIQID() --- PHP
+      cb(null, 'servicio' + '-' + Date.now()+ path.extname(file.originalname));      //UNIQID() --- PHP
     }
   })
    

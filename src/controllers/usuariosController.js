@@ -14,7 +14,7 @@ const db = require('../database/models/');
 //Aquí hago la asociación al módelo correspondiente
 const User = db.User;
 
-//Este código lo comente ya que lo usavamos cuando trabajamos con los archivos en formato JSON
+//Este código lo comente ya que lo usavamos cuando trabajamos con los archivos en formato JSON IMPORTANTE
 //let provincia = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../models/provincias.json')));
 
 /*let provincias = provincia.sort(function (a, b) {

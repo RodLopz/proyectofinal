@@ -11,15 +11,16 @@ const adminController = require(path.resolve(__dirname , '..','controllers','adm
 //https://www.npmjs.com/package/multer
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path.resolve(__dirname, '../../public/images/platos'));    //Aquí deben indicar donde van a guardar la imagen
+      cb(null, path.resolve(__dirname, '../../public/images/servicio_web'));    //Aquí deben indicar donde van a guardar la imagen
     },
     filename: function (req, file, cb) {
-      cb(null, 'plato' + '-' + Date.now()+ path.extname(file.originalname));      //UNIQID() --- PHP
+      cb(null, 'servicio' + '-' + Date.now()+ path.extname(file.originalname));      //UNIQID() --- PHP
     }
   })
    
 const upload= multer({ storage })
 
+//tocar admin
 router.get('/administrar/buscar', adminController.search);
 router.get('/administrar',mantenimiento, adminController.index);
 router.get('/admin/create',  adminController.create);

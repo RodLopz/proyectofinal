@@ -167,7 +167,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Daniel','Fuentes','cedavilu@gmail.com','$2a$10$63rXDLZHIRZgUF5DMYx4Iuz.aW2.sVYevEv8HvZfHTalzAkQTMUMi',82,'foto-1597167760916.png',9,'2020-08-11 17:42:41','2020-08-11 17:42:41',NULL),(2,'Daniel','Fuentes','dfuentes@digitalhouse.com','$2a$10$BWEqyQ4aFZidgb0lzGTq1uSaDnMpLPPMi6xUMbJddkOp7Fvg2oBXG',18,'foto-1597333736422.jpg',1,'2020-08-13 15:48:56','2020-08-13 15:48:56',NULL),(3,'Victor','Fuentes','victor1@gmail.com','$2a$10$UkQ9OEYVCoI7/07a19VTRe2FfSj5vpWfPqrJjMDbM/FA6l4BynEpG',82,'foto-1597378583037.png',1,'2020-08-14 04:16:23','2020-08-14 04:16:23',NULL),(4,'Daniel','Fuentes','df@gmail.com','$2a$10$/EnZpBkDBqgtpnAFYQMQw.Gvk.6xPVUXw5L0.CGQ/W5QyeEopBtJm',10,'foto-1598401828903.pdf',1,'2020-08-26 00:30:29','2020-08-26 00:30:29',NULL);
+INSERT INTO `users` VALUES (1,'Rodrigo','Lopez','rodrigo@gmail.com','$2a$10$63rXDLZHIRZgUF5DMYx4Iuz.aW2.sVYevEv8HvZfHTalzAkQTMUMi',82,'',9,'2020-08-11 17:42:41','2020-08-11 17:42:41',NULL),(2,'Pablo ','Calleja','pablocalleja@gmail.com','$2a$10$BWEqyQ4aFZidgb0lzGTq1uSaDnMpLPPMi6xUMbJddkOp7Fvg2oBXG',18,'',1,'2020-08-13 15:48:56','2020-08-13 15:48:56',NULL),(3,'Victor','Fuentes','victor1@gmail.com','$2a$10$UkQ9OEYVCoI7/07a19VTRe2FfSj5vpWfPqrJjMDbM/FA6l4BynEpG',82,'foto-1597378583037.png',1,'2020-08-14 04:16:23','2020-08-14 04:16:23',NULL),(4,'Daniel',',Martinez','danielmartinez@gmail.com','$2a$10$/EnZpBkDBqgtpnAFYQMQw.Gvk.6xPVUXw5L0.CGQ/W5QyeEopBtJm',10,'foto-1598401828903.pdf',1,'2020-08-26 00:30:29','2020-08-26 00:30:29',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -180,4 +180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-21 14:13:14
+-- 

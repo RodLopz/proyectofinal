@@ -23,10 +23,10 @@
                   <hr class="mb-4">
                   <strong>Total:</strong><p>$<%= cart.total %></p>
                   <br>
-                  <strong>Platos:</strong>
+                  <strong>Servicios:</strong>
                   <ul>
                      <% cart.items.forEach(item => { %>
-                     <li><p><%= item.dish.name %> x<%= item.dish.quantity %> - <strong><small><%= item.dish.user.username %></small></strong></p></li>
+                     <li><p><%= item.service.name %> x<%= item.service.quantity %> - <strong><small><%= item.service.user.username %></small></strong></p></li>
                      <% }) %>
                   </ul>
                   <br>

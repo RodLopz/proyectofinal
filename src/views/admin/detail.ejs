@@ -9,7 +9,7 @@
         <section class="row">
           <article class="col-12  card pt-5" >
                   <div class="card-body">
-                    <h1 class="card-title text-center">Detalle del Plato</h1>
+                    <h1 class="card-title text-center">Detalle del Servicio</h1>
                   </div>
           </article>
       </section>
@@ -20,14 +20,14 @@
                     <div class="col-8 mx-auto bg-light ">
                         <div class="card">
                             <ul class="list-group">
-                                <li class="list-group-item">Id: <%= platoComida.id%></li>
-                                <li class="list-group-item">Nombre: <%= platoComida.name%></li>
-                                <li class="list-group-item">Descripción: <%= platoComida.description%></li>
-                                <li class="list-group-item">Precio: <%= platoComida.price%></li>
-                                <li class="list-group-item">Descuento: <%= platoComida.discount%></li>
+                                <li class="list-group-item">Id: <%= servicioWeb.id%></li>
+                                <li class="list-group-item">Nombre: <%= servicioWeb.name%></li>
+                                <li class="list-group-item">Descripción: <%= servicioWeb.description%></li>
+                                <li class="list-group-item">Precio: <%= servicioWeb.price%></li>
+                                <li class="list-group-item">Descuento: <%= servicioWeb.discount%></li>
                             </ul>
                             <figure class="form-group">
-                              <img class="w-100 " src="/images/platos/<%= platoComida.image%>" alt="Plato de comida">
+                              <img class="w-100 " src="/images/servicios_web/<%= servicioWeb.image%>" alt="servicio web">
                           </figure>
                         </div> 
                         <a class="btn btn-danger" href="/administrar">Volver</a>

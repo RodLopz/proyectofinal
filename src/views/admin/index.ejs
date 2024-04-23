@@ -3,7 +3,7 @@
 <%- include('../partials/head.ejs') %>
 <body >
     <%-include('../partials/navBar.ejs')%>
-    <h1 class="text-center text-success display-5 mt-5 pt-2">Administrador de Platos</h1>
+    <h1 class="text-center text-success display-5 mt-5 pt-2">Administrador de Servicios</h1>
     <section class="row">
         <article class="col-6" >
             <a class="nav-link" href="/admin/create"><ion-icon name="add-circle-outline"></ion-icon>Agregar</a>
@@ -20,20 +20,20 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Nombre del Plato</th>
+                <th>Nombre del Servicio</th>
                 <th>Ver</th>
                 <th>Editar</th>
                 <th>Borrar</th>
             </tr>
         </thead>
         <tbody>
-            <% platos.forEach(plato => { %>
+            <% servicios.forEach(servicio => { %>
                 <tr>
-                    <td><%= plato.id %> </td>
-                    <td><%= plato.name%> </td>
-                    <td><a href="/admin/detail/<%= plato.id%>"><ion-icon name="eye-outline"></ion-icon></a></td>
-                    <td><a href="/admin/edit/<%= plato.id%>"><ion-icon name="create-outline"></ion-icon></a></td>
-                    <td><a href="/admin/delete/<%= plato.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
+                    <td><%= servicio.id %> </td>
+                    <td><%= servicio.name%> </td>
+                    <td><a href="/admin/detail/<%= servicio.id%>"><ion-icon name="eye-outline"></ion-icon></a></td>
+                    <td><a href="/admin/edit/<%= servicio.id%>"><ion-icon name="create-outline"></ion-icon></a></td>
+                    <td><a href="/admin/delete/<%= servicio.id%>"><ion-icon name="trash-outline"></ion-icon></a></td>
                 </tr>
             <% }) ; %>
             

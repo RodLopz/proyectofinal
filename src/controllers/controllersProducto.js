@@ -1,23 +1,18 @@
 const path = require('path');
 const fs = require('fs');
 //const db =  require('../database/models/');
-const {Dish, Category} = require('../database/models/');
+const {Service, Category} = require('../database/models/');
 
-//const Dish = db.sequelize;
-//const Category = db.sequelize;
 
-//let platos =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','models','platos.json')));
-//let categorias =  JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','models','categorias.json')));
 
 
 module.exports = {
     index: function(req,res){
-        const platos = Dish.findAll();
+        const servicios = Service.findAll();
         const categorias = Category.findAll();
-        Promise.all([platos,categorias])
-        .then(([platos,categorias]) =>{
-            //return res.send(platos)
-            res.render(path.resolve(__dirname , '..','views','productos','productos') , {platos,categorias});
+        Promise.all([servicios,categorias])
+        .then(([servicios,categorias]) =>{
+            res.render(path.resolve(__dirname , '..','views','productos','productos') , {servicios,categorias});
         })           
         .catch(error => res.send(error))
     },
@@ -25,26 +20,26 @@ module.exports = {
     categorias: (req,res) =>{
        //return res.send(req.query.categoria);
        const categorias = Category.findAll();
-       const platos = Dish
+       const servicios = Service
        .findAll({
            where: {categoryId : req.query.categoria},
            include: [{association: 'category'}]
        })
-       Promise.all([platos,categorias])
-       .then(([platos,categorias]) =>
-           //return res.send(platoComida);
-           res.render(path.resolve(__dirname, '..','views','productos','productos'), {platos,categorias })
+       Promise.all([servicios,categorias])
+       .then(([servicios,categorias]) =>
+
+           res.render(path.resolve(__dirname, '..','views','productos','productos'), {servicios,categorias })
        )        
     },
 
     show: (req,res) => {
-        Dish
+        Service
         .findByPk(req.params.id, {
             include: ['category']
         })
-        .then(platoComida =>{
-            //return res.send(platoComida);
-            res.render(path.resolve(__dirname, '..','views','productos','detail'), {platoComida });
+        .then(servicioWeb =>{
+    
+            res.render(path.resolve(__dirname, '..','views','productos','detail'), { servicioWeb });
         })
     },
 
