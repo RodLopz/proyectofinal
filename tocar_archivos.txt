@@ -1,0 +1,15 @@
+Que tocar:
+db/restaurante.sql
+src/controllers/apis/apiProductoController.js
+toda la carpeta controllers
+database/category.js
+database/dish.js
+database/items.js
+models ver.
+routes/apis
+routes/adminRoutes.js
+routes/productosRoutes.js
+echar ojo a views/admin
+views/carrito
+views/productos
+views/web/index.ejs
