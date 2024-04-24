@@ -5,7 +5,7 @@ const path = require('path');
 
 //------- Sequelize ----------------//
 
-const { User} = require('../database/models');
+const {User} = require('../database/models');
 
 //------- JSON ---------------------//
 //let archivoUsuarios =  JSON.parse(fs.readFileSync(path.resolve(__dirname, '../models/usuarios.json')));

@@ -1,5 +1,3 @@
-'use strict';
-
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
@@ -30,6 +28,15 @@ Object.keys(db).forEach(modelName => {
     db[modelName].associate(db);
   }
 });
+
+// Asegúrate de que se llame al método sync() para sincronizar los modelos con la base de datos
+sequelize.sync()
+  .then(() => {
+    console.log('Los modelos se han sincronizado correctamente con la base de datos.');
+  })
+  .catch(err => {
+    console.error('Error al sincronizar modelos con la base de datos:', err);
+  });
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
