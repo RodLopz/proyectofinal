@@ -1,18 +1,18 @@
 [
     {
       "id": 1,
-      "nombre": "Entradas"
+      "nombre": "WEB"
     },
     {
       "id": 2,
-      "nombre": "Platos principales"
+      "nombre": "RRSS"
     },
     {
       "id": 3,
-      "nombre": "Postres"
+      "nombre": "ASESORAMIENTO"
     },
     {
       "id": 4,
-      "nombre": "Bebidas"
+      "nombre": "DISEÑO"
     }
   ]
