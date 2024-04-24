@@ -10,7 +10,7 @@
    <div>
       <div class="row">
          <article class="col-12">
-            <h2 class="display-5 text-white bg-info text-center pt-5 ">Detale de la compra</h2>
+            <h2 class="display-5 text-white bg-info text-center pt-5 ">Detalle de la compra</h2>
          </article>
       </div>
       <div >
@@ -26,7 +26,9 @@
                   <strong>Servicios:</strong>
                   <ul>
                      <% cart.items.forEach(item => { %>
-                     <li><p><%= item.service.name %> x<%= item.service.quantity %> - <strong><small><%= item.service.user.username %></small></strong></p></li>
+                     <li><p><%= item.service.name %> x<%= item.service.quantity %> - <strong><small><% if (item.service.user) { %>
+                        <%= item.service.user.username %>  <!--verificación de existencia antes de intentar acceder a la propiedad username --> 
+                    <% } %></small></strong></p></li>
                      <% }) %>
                   </ul>
                   <br>
