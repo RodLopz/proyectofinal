@@ -84,7 +84,7 @@ window.addEventListener('load',function(){
 
         //Aquí valido que el usuario coloque su avatar (Yo en mi caso lo considero como un dato obligatorio, ustedes si quieren lo validan como deseen)
         if(avatar.value == ''){
-            errores.push('Debe seleccionar su avatar en formato JPG - PNG ó JPEG');
+            errores.push('Debe seleccionar su foto de perfil en formato JPG - PNG ó JPEG');
             avatar.classList.add('is-invalid');   
             //errores['last_name'] = 'El campo nombre no puede estar vacio...';
         }else{
