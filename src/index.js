@@ -65,4 +65,4 @@ app.use(apiProductosRoutes);
 app.use(carritoRoutes);
 
 //Levantar nuestro servidor
-app.listen(3001,()=>console.log('Servidor corriendo en el puerto 3001'));
+app.listen(3306,()=>console.log('Servidor corriendo en el puerto 3306'));
