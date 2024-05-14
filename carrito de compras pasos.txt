@@ -1,5 +1,4 @@
-Carrito Compras. (MSc. Ángel Daniel Fuentes S.)
-
+Carrito Compras.
 1.- Agregar un producto al carrito
 	En la vista del producto, debemos tener un
 	Formulario que almenos indiquemos la 
