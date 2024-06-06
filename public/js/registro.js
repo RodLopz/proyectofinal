@@ -82,7 +82,7 @@ window.addEventListener('load',function(){
         //     provincia.classList.remove('is-invalid');
         // }
 
-        //Aquí valido que el usuario coloque su avatar (Yo en mi caso lo considero como un dato obligatorio, ustedes si quieren lo validan como deseen)
+        //Aquí valido que el usuario coloque su avatar (Yo en mi caso lo considero como un dato obligatorio)
         if(avatar.value == ''){
             errores.push('Debe seleccionar su foto de perfil en formato JPG - PNG ó JPEG');
             avatar.classList.add('is-invalid');   
@@ -109,29 +109,29 @@ window.addEventListener('load',function(){
         
     })
 
-    //Aquí voy a disponer lo referido al uso de las APIS.
-    let selectProvincia = document.getElementById('provincia');
+    // //Aquí voy a disponer lo referido al uso de las APIS.
+    // let selectProvincia = document.getElementById('provincia');
     
-    //Debemos crear una función que cargue las provincias
-    cargarProvincias();
+    // //Debemos crear una función que cargue las provincias
+    // cargarProvincias();
 
-    function cargarProvincias(){
-        fetch('https://apis.datos.gob.ar/georef/api/provincias') 
-        .then(function(respuesta){
-            return respuesta.json();
-        })
-        .then(function(datosProvincias){
-            //console.log(datosProvincias.provincias);
-            //selectProvincia.innerHTML = `<option value= "" disabled selected > Seleccione una provincia </option> `
-            for (const datoProvincia of datosProvincias.provincias) {
-                let opcionProvincia = document.createElement('option');
-                opcionProvincia.setAttribute('value',datoProvincia.id);
-                opcionProvincia.innerHTML = datoProvincia.nombre;
-                selectProvincia.appendChild(opcionProvincia);
-            }
+    // function cargarProvincias(){
+    //     fetch('') 
+    //     .then(function(respuesta){
+    //         return respuesta.json();
+    //     })
+    //     .then(function(datosProvincias){
+    //         //console.log(datosProvincias.provincias);
+    //         //selectProvincia.innerHTML = `<option value= "" disabled selected > Seleccione una provincia </option> `
+    //         for (const datoProvincia of datosProvincias.provincias) {
+    //             let opcionProvincia = document.createElement('option');
+    //             opcionProvincia.setAttribute('value',datoProvincia.id);
+    //             opcionProvincia.innerHTML = datoProvincia.nombre;
+    //             selectProvincia.appendChild(opcionProvincia);
+    //         }
 
-        })
-    }
+    //     })
+    // }
 
 
 
